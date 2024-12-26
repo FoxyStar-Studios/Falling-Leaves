@@ -1,16 +1,16 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.21.50",
     "minecraft:client_entity": {
         "description": {
             "identifier": "minecraft:player",
-            "min_engine_version": "1.10.0",
-            
+            "min_engine_version": "1.21.50",
             "materials": {
                 "default": "entity_alphatest",
                 "cape": "entity_alphatest",
                 "animated": "player_animated",
                 "spectator": "player_spectator"
             },
+            "enable_attachables": true,
             "textures": {
                 "default": "textures/entity/steve",
                 "cape": "textures/entity/cape_invisible"
@@ -18,6 +18,13 @@
             "geometry": {
                 "default": "geometry.humanoid.custom",
                 "cape": "geometry.cape"
+            },
+            
+            "particle_effects": {
+                "oak_detect": "pog:oak_detect",
+                "birch_detect": "pog:birch_detect",
+                "spruce_detect": "pog:spruce_detect",
+                "azalea_detect": "pog:azalea_detect"
             },
             "scripts": {
                 "scale": "0.9375",
@@ -41,14 +48,8 @@
                 ],
                 "animate": [
                     "root",
-                   { "fallingleaves": "!q.is_in_ui && !v.is_paperdoll"}
+                    { "fallingleaves": "!q.is_in_ui && !v.is_paperdoll" }
                 ]
-            },
-            "particle_effects": {
-                "oak_detect": "pog:oak_detect",
-                 "birch_detect": "pog:birch_detect",
-                 "spruce_detect": "pog:spruce_detect",
-                 "azalea_detect": "pog:azalea_detect"
             },
             "animations": {
                 "root": "controller.animation.player.root",
@@ -115,23 +116,12 @@
                 "holding_heavy_core": "animation.player.holding_heavy_core"
             },
             "render_controllers": [
-                {
-                    "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator"
-                },
-                {
-                    "controller.render.player.third_person_spectator": "!variable.is_first_person && !variable.map_face_icon && query.is_spectator"
-                },
-                {
-                    "controller.render.player.first_person": "variable.is_first_person && !query.is_spectator"
-                },
-                {
-                    "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator"
-                },
-                {
-                    "controller.render.player.map": "variable.map_face_icon"
-                }
-            ],
-            "enable_attachables": true
+                { "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator" },
+                { "controller.render.player.third_person_spectator": "!variable.is_first_person && !variable.map_face_icon && query.is_spectator" },
+                { "controller.render.player.first_person": "variable.is_first_person && !query.is_spectator" },
+                { "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator" },
+                { "controller.render.player.map": "variable.map_face_icon" }
+            ]
         }
     }
 }

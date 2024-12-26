@@ -4,27 +4,22 @@
 		"name": "Falling Leaves",
 		"description": "A pack by Poggy and King",
 		"uuid": "2614d0f4-b381-4c2b-9066-8253301b9030",
-		"min_engine_version": [
-			1,
-			21,
-			50
-		],
-		"version": [
-			1,
-			0,
-			0
-		]
+		"min_engine_version": [ 1, 21, 50 ],
+		"version": [ 1, 0, 0 ]
 	},
+	"metadata": {
+        	"product_type": "addon",
+        	"authors": [
+            		"Poggy",
+			"FoxyStar Studios"
+        	]
+    	},
 	"modules": [
 		{
 			"description": "A pack by Poggy and King",
 			"type": "resources",
 			"uuid": "ff0b43b4-b714-4b87-95e2-fd90e9caf7e6",
-			"version": [
-				1,
-				0,
-				0
-			]
+			"version": [ 1, 0, 0 ]
 		}
 	]
 }
