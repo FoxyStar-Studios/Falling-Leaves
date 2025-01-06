@@ -5,7 +5,7 @@
 			"identifier": "pog:jungle_leaf",
 			"basic_render_parameters": {
 				"material": "particles_alpha",
-				"texture": "textures/particles/jungle_leaf"
+				"texture": "textures/particles/azalea_leaves"
 			}
 		},
 		"components": {
@@ -20,6 +20,10 @@
 				"half_dimensions": [0.5, 0, 0.5],
 				"surface_only": true,
 				"direction": ["Math.random(-0.016, 0.016)", "Math.random(-0.2, -0.6)", "Math.random(-0.016, 0.016)"]
+			},
+			"minecraft:particle_initialization": {
+				"per_update_expression": "variable.stuck_time = variable.particle_random_1 * 2 + 1;",
+				"per_render_expression": "variable.stuck_time = variable.particle_random_1 * 2 + 1;"
 			},
 			"minecraft:particle_lifetime_expression": {
 				"max_lifetime": "Math.random(10.0, 12.0)"
@@ -37,10 +41,10 @@
 				"size": ["variable.particle_random_3 * 0.2 + 0.075", "variable.particle_random_3 * 0.2 + 0.075"],
 				"facing_camera_mode": "lookat_xyz",
 				"uv": {
-					"texture_width": 32,
+					"texture_width": 16,
 					"texture_height": 16,
-					"uv": ["Math.Round(variable.particle_random_1*3)*8", 8],
-					"uv_size": [8, 8]
+					"uv": [0, 0],
+					"uv_size": [16, 16]
 				}
 			},
 			"minecraft:particle_motion_collision": {
