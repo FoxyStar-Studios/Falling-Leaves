@@ -4,11 +4,14 @@
 		"description": {
 			"identifier": "pog:spruce_leaf",
 			"basic_render_parameters": {
-				"material": "particles_alpha",
+				"material": "particles_blend",
 				"texture": "textures/particles/spruce_leaf"
 			}
 		},
 		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "variable.spawn_texture = math.round(math.random(0,1));"
+			},
 			"minecraft:emitter_rate_steady": {
 				"spawn_rate": "Math.round(Math.random(1, 6))",
 				"max_particles": 6
@@ -55,7 +58,13 @@
 			},
 			"minecraft:particle_appearance_lighting": {},
 			"minecraft:particle_appearance_tinting": {
-				"color": [1, 1, 1, 1]
+				"color": {
+					"interpolant": "v.particle_age / v.particle_lifetime",
+					"gradient": {
+						"0.86": "#ffffffff",
+						"1.0": "#00FFFFFF"
+					}
+				}
 			}
 		}
 	}

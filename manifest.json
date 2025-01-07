@@ -16,7 +16,7 @@
     	},
 	"modules": [
 		{
-			"description": "A pack by Poggy and King",
+			"description": "A pack by Poggy and King, with contributions from ItsDrCat", //continue to list people who contributed here! -cat
 			"type": "resources",
 			"uuid": "ff0b43b4-b714-4b87-95e2-fd90e9caf7e6",
 			"version": [ 1, 0, 0 ]

@@ -18,7 +18,7 @@
 		},
 		"components": {
 			"minecraft:emitter_rate_instant": {
-				"num_particles": 125
+				"num_particles": 200
 			},
 			"minecraft:emitter_lifetime_once": {
 				"active_time": 1

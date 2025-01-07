@@ -24,7 +24,8 @@
                 "oak_detect": "pog:oak_detect",
                 "birch_detect": "pog:birch_detect",
                 "spruce_detect": "pog:spruce_detect",
-                "azalea_detect": "pog:azalea_detect"
+                "azalea_detect": "pog:azalea_detect",
+                "azalea_detect_flowering": "pog:azalea_detect_flowering"
             },
             "scripts": {
                 "scale": "0.9375",
