@@ -4,11 +4,14 @@
 		"description": {
 			"identifier": "pog:oak_leaf",
 			"basic_render_parameters": {
-				"material": "particles_blend",
+				"material": "particles_alpha",
 				"texture": "textures/particles/oak_leaf"
 			}
 		},
 		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "variable.spawn_texture = math.round(math.random(0,1));"
+			},
 			"minecraft:emitter_rate_steady": {
 				"spawn_rate": "Math.random(2, 4)",
 				"max_particles": 6
@@ -43,7 +46,7 @@
 				"uv": {
 					"texture_width": 31,
 					"texture_height": 16,
-					"uv": [3, 4],
+					"uv": ["3+(16*variable.spawn_texture)", 4],
 					"uv_size": [8, 8]
 				}
 			},
@@ -57,7 +60,7 @@
 				"color": {
 					"interpolant": "v.particle_age / v.particle_lifetime",
 					"gradient": {
-						"0.86": "#ffffffff",
+						"0.0": "#ffffffff",
 						"1.0": "#00FFFFFF"
 					}
 				}

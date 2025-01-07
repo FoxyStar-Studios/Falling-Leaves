@@ -17,6 +17,9 @@
 			}
 		},
 		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "variable.spawn_texture = math.round(math.random(0,0));"
+			},
 			"minecraft:emitter_rate_steady": {
 				"spawn_rate": "Math.round(Math.random(1, 6))",
 				"max_particles": 6
@@ -46,12 +49,12 @@
 				"linear_acceleration": ["Math.random(1, 2)", -1.5, 0]
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": ["variable.particle_random_3 * 0.2 + 0.075", "variable.particle_random_3 * 0.2 + 0.075"],
+				"size": ["(variable.particle_random_3 * 0.2 + 0.075) - variable.spawn_texture*0.1", "(variable.particle_random_3 * 0.2 + 0.075) - variable.spawn_texture*0.1"],
 				"facing_camera_mode": "lookat_xyz",
 				"uv": {
-					"texture_width": 16,
+					"texture_width": 32,
 					"texture_height": 16,
-					"uv": [0, 0],
+					"uv": ["16*(variable.spawn_texture)", 0],
 					"uv_size": [16, 16]
 				}
 			},

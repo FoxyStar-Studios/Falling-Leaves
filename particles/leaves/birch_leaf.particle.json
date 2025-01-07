@@ -9,6 +9,9 @@
 			}
 		},
 		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "variable.spawn_texture = math.round(math.random(0,1));"
+			},
 			"minecraft:emitter_rate_steady": {
 				"spawn_rate": "Math.random(0, 4)",
 				"max_particles": 6
@@ -44,7 +47,7 @@
 				"uv": {
 					"texture_width": 8,
 					"texture_height": 6,
-					"uv": [0, 0],
+					"uv": ["04*variable.spawn_texture", 0],
 					"uv_size": [4, 6]
 				}
 			},
