@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "pog:birch_leaf",
 			"basic_render_parameters": {
-				"material": "particles_alpha",
+				"material": "particles_blend",
 				"texture": "textures/particles/birch_leaf"
 			}
 		},
@@ -35,7 +35,8 @@
 			"minecraft:particle_initial_speed": 1,
 			"minecraft:particle_motion_dynamic": {
 				"linear_acceleration": [-2, -1.5, 0],
-				"linear_drag_coefficient": "variable.stuck_time = variable.particle_random_1 * 0.1+ 0.1;return variable.particle_age < variable.stuck_time ? 77 : 0.01;"
+				"linear_drag_coefficient": "variable.stuck_time = variable.particle_random_1 * 0.1+ 0.1;return variable.particle_age < variable.stuck_time ? 77 : 0.01;",
+				"rotation_acceleration": -0.1
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": ["variable.particle_random_3 * 0.05 + 0.075", "variable.particle_random_3 * 0.1 + 0.075"],
@@ -54,7 +55,13 @@
 			},
 			"minecraft:particle_appearance_lighting": {},
 			"minecraft:particle_appearance_tinting": {
-				"color": [1, 1, 1, 1]
+				"color": {
+					"interpolant": "v.particle_age / v.particle_lifetime",
+					"gradient": {
+						"0.86": "#ffffffff",
+						"1.0": "#00FFFFFF"
+					}
+				}
 			}
 		}
 	}
