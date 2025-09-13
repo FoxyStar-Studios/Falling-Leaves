@@ -9,7 +9,8 @@
 					{ "effect": "oak_detect" },
 					{ "effect": "birch_detect" },
 					{ "effect": "spruce_detect" },
-					{ "effect": "azalea_detect" }
+					{ "effect": "azalea_detect" },
+					{ "effect": "azalea_detect_flowering" }
 				]
 			}
 		}
