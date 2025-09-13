@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./pack_icon.png" />
+  <img src="./pack_icon.png" width="256" height="256" />
 
   # Falling Leaves
   A pack used for showcasing falling leaves on Minecraft: Bedrock Edition.
